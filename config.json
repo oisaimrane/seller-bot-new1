@@ -1,7 +1,7 @@
 {
     "Activity": "",
     "ActivityType": "STREAMING",
-    "bot_id": "1260566073539821568"
+    "bot_id": "1260566073539821568",
     "mainGuildID": "1260359095081500772",
     "prefix":"!",
     "registerGlobal": true,
