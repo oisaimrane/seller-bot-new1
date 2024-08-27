@@ -1,9 +1,10 @@
 {
-    "Activity": "discord.gg/rzs",
+    "Activity": "",
     "ActivityType": "STREAMING",
-    "mainGuildID": "961937101862080552",
+    "bot_id": "1260566073539821568"
+    "mainGuildID": "1260359095081500772",
     "prefix":"!",
     "registerGlobal": true,
-    "ownerID": "717858852204183592"
+    "ownerID": "793877159966015548"
     
 }
