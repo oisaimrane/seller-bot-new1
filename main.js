@@ -1,11 +1,12 @@
 const express = require("express");
-const app = express();
 const { Client, Collection, Intents } = require('discord.js');
-const fs = require('fs');
 const db = require('pro.db');
 const data = require("./config.json");
 
-// Express server setup
+// Initialize Express
+const app = express();
+const port = 3000; // Set the port for your Express server
+
 app.get("/", (req, res) => {
   res.send("Hello I'm Ready To Shop");
 });
@@ -14,11 +15,10 @@ app.use('/ping', (req, res) => {
   res.send(new Date());
 });
 
-const port = 3000; // Set the port for your Express server
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
-// Discord.js client setup
-let client = new Client({
+// Initialize Discord.js client
+const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
   intents: [
     Intents.FLAGS.GUILDS,
@@ -69,6 +69,7 @@ process.on('uncaughtException', error => {
   console.error('Uncaught exception:', error);
 });
 
+// Uncomment and use if you want to handle direct messages
 // client.on('messageCreate', async (message) => {
 //   if (message.guild) return;
 //   if (message.author.bot) return;
