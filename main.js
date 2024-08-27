@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const keep_alive = require('./keep_alive.js');
 const { Client, Collection, Intents } = require('discord.js');
 const db = require('pro.db');
 const fs = require('fs');
